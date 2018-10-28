@@ -5462,13 +5462,15 @@ button.bg-danger:focus {
   background-color: #bd2130 !important;
 }
 
-.bg-light {
+.bg-light, .bookmark {
   background-color: #f8f9fa !important;
 }
 
-a.bg-light:hover, a.bg-light:focus,
+a.bg-light:hover, a.bookmark:hover, a.bg-light:focus, a.bookmark:focus,
 button.bg-light:hover,
-button.bg-light:focus {
+button.bookmark:hover,
+button.bg-light:focus,
+button.bookmark:focus {
   background-color: #dae0e5 !important;
 }
 
@@ -8614,15 +8616,75 @@ h3 {
   padding: 10px;
 }
 
+.padding-5 {
+  padding: 5px;
+}
+
 .bookmark {
-  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+.bookmark .card-body {
+  padding: 0.7rem 0.7rem 0.1rem;
+}
+.bookmark .card-title {
+  font-size: 1rem;
 }
 .bookmark .card-subtitle {
+  font-size: 0.6rem;
+}
+.bookmark .card-link {
   font-size: 0.75rem;
+}
+.bookmark .card-link + .card-link {
+  margin-left: 0;
 }
 
 .dashboard-menu {
   padding: 30px 0 10px 0;
+}
+
+.bottom-20 {
+  bottom: 20px;
+}
+
+.group .fa-pen {
+  font-size: 0.8rem;
+}
+
+.btn-add-bookmark {
+  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.search-bar {
+  position: relative;
+}
+.search-bar .btn {
+  position: absolute;
+  right: 7px;
+  z-index: 2;
+  background: transparent;
+}
+
+@media (min-width: 576px) {
+  .search-bar .search-input {
+    width: 100%;
+  }
+}
+.bookmark-menu .dropdown-toggle::after {
+  display: none;
+}
+.bookmark-menu .bookmark-menu-list {
+  min-width: 0.8rem;
+}
+.bookmark-menu .bookmark-menu-list .dropdown-item {
+  padding: 0.25rem 0.8rem;
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=App.css.map */

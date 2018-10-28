@@ -4,14 +4,93 @@
   padding: 10px;
 }
 
+.padding-5 {
+  padding: 5px;
+}
+
 .bookmark {
-  font-size: 0.75rem;
+
+  @extend .bg-light;
+
+  margin-bottom: 10px;
+
+  .card-body {
+    padding: 0.7rem 0.7rem 0.1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
 
   .card-subtitle {
+    font-size: 0.60rem;
+  }
+
+  .card-link {
     font-size: 0.75rem;
+  }
+
+  .card-link + .card-link {
+    margin-left: 0;
   }
 }
 
 .dashboard-menu {
   padding: 30px 0 10px 0; 
 }
+
+.bottom-20 {
+  bottom: 20px;
+}
+
+.group {
+  .fa-pen {
+    font-size: 0.8rem;
+  }
+}
+
+.btn-add-bookmark {
+  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.search-bar {
+  position: relative;
+  
+  .btn {
+    position: absolute;
+    right: 7px;
+    z-index: 2;
+    background: transparent;
+  }
+}
+
+@media (min-width: 576px) { 
+  .search-bar {
+    .search-input {
+      width: 100%;
+    }
+  }
+ }
+
+ .bookmark-menu {
+   .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+   }
+    
+  .bookmark-menu-list {
+    min-width: 0.8rem;
+
+    .dropdown-item {
+      padding: 0.25rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+ }
