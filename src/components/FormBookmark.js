@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class FormBookmark extends Component {
   render() {
     return (
-      <form action="javascript:void(0);">
+      <form action="#">
         
         <div className="form-group row">
           <label htmlFor="input1" className="col-sm-3 col-form-label">Link</label>
